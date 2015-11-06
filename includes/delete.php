@@ -3,9 +3,8 @@
 </head>
 
 <?php
-	echo"<script type='text/javascript'>check();</script>";
 	include 'test.php';
-	$id = $_POST['S_ID'];
+	$id = $_GET['S_ID'];
 	$sql="DELETE FROM studentid WHERE StudentID = '$id'";
 ?>
 
@@ -23,10 +22,3 @@
 
 ?>
 
-<script type="text/javascript">
-$(function check(){
-	alert("Do u really want to delete?!");
-
-
-})
-</script>
