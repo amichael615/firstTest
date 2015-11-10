@@ -12,7 +12,7 @@ $(document).ready(function (){
 </script>
 </head>
 <body>
-
+<input type="button" onclick="check()" value="刪除">
 <button>Send an HTTP GET request to a page and get the result back</button>
 
 </body>

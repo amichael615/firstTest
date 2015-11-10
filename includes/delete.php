@@ -4,7 +4,8 @@
 
 <?php
 	include 'test.php';
-	$id = $_GET['S_ID'];
+	$id = $_POST['S_ID'];
+	//$id=$_GET['S_ID'];
 	$sql="DELETE FROM studentid WHERE StudentID = '$id'";
 ?>
 
