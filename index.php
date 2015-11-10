@@ -22,6 +22,7 @@
 因為就算註解掉這一整句 php還是會執行 並且因為PHP會先跑 跑完再跑JS 導致JS裡的PHP找不到值
 */
 	function check(id){
+
 		if(confirm("Do u really want to delete?")){
 			//var id=$('[name=S_ID]').val();
 			$.ajax({
@@ -30,14 +31,14 @@
 				type:"POST",
 				dataType:'text',
 				success:function(){
-					alert("I got it");
+					alert("You got it");
 				},
 				error:function(){
 					alert("Error");
-			
 				},
 
 			});
+			$("#"+id).remove();
 		}
 		};
 		
@@ -62,7 +63,7 @@
 		$id=$studentid['StudentID'];
 ?>
 		
-		<tr>
+		<tr id="<?php echo $id;?>">
 			<td><?=$studentid['StudentID']?></td>
 			<td><?=$studentid['StudentName']?></td>
 			<td><?=$studentid['StudentSex']?></td>
