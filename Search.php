@@ -1,20 +1,17 @@
 <head>
+<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-1.11.3.js" type="text/javascript"></script>
 	<script type="text/javascript">
-			$(function(){
-			$("td").css("color", "red");
 			
-		});
 </script>
 </head>
-
+<body>
 <table width=500 border=1>
 	<tr>
-		<td>ID</td>
-		<td>Name</td>
-		<td>Sex</td>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Sex</th>
 	</tr>
-
 
 
 <?php
@@ -41,7 +38,7 @@
 
 
  	$sql="SELECT *FROM studentid WHERE ".$sqlStr;
-	echo $sql;
+	
 	$result=mysql_query($sql);
 
 	while($studentArray = mysql_fetch_array($result)){
@@ -51,6 +48,9 @@
 		 <td><?=$studentArray['StudentID']?></td>
 		 <td><?=$studentArray['StudentName']?></td>
 		 <td><?=$studentArray['StudentSex']?></td>
+		 </tr>
 <?php
 }
 ?>
+</table>
+</body>
